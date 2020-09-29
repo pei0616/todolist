@@ -1,0 +1,76 @@
+.mt-40px{
+   margin-top:40px !important;
+}
+
+.mb-40px
+{
+    margin-bottom: 40px;
+}
+
+.mt-5px
+{
+    margin-top:5px;
+}
+.m-3px{
+    margin:3px 0;
+}
+
+.text-shadow
+{
+    text-shadow:1px 1px 3px #ddd;
+}   
+
+//input顯示邊框跟outline
+.cancel-input
+{
+    border:none !important;
+    outline:none !important;
+}
+
+.msg-alert
+{
+    margin-bottom:0;
+    color:$color-danger;
+    text-align:center;
+    font-size:14px;
+    font-weight: bold;
+   
+}
+
+.msg-notice
+{
+    color:$color-alert;
+    font-size:$font-mini;
+    margin:auto;
+    text-align:center;
+    font-weight:bold;
+}
+
+.msg-error
+{
+    color:$color-danger;
+    @include msg;
+}
+
+.msg-success
+{
+    color:$color-success;
+    @include msg;
+}
+
+.ajax-success{
+    color:$color-success;
+    text-shadow:1px 1px 5px #fff;
+    @include msg;
+    font-family: "monospace","sans-serif ";
+}
+
+.ajax-alert{
+    color:$color-danger;
+    text-shadow:1px 1px 5px #fff;
+    @include msg;
+    font-family: "monospace","sans-serif ";
+}
+
+
+

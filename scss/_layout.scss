@@ -1,0 +1,302 @@
+//register、index.php
+html,body{
+    color:$color-primary;
+    font-family: 'Caveat', cursive;
+    font-family: 'Pacifico', cursive;
+    font-family: 'Satisfy', cursive;
+    font-size:$font-m;
+}
+.block_bg
+{
+    background-image:url(../images/bg.jpg);
+    background-position:center;
+    background-size:cover;
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    .logo
+    {
+        position:fixed;
+        left:20px;
+        top:20px;
+        font-size:$font-b;
+        font-family:$font-logo;
+        text-shadow:0 0 5px #eee;
+        a{color:#000 ;}
+        a:hover{
+            color:darken(#eee,70%);
+            text-decoration:none;
+        }
+    }
+    .login{
+        width:60px;
+        position:fixed;
+        right:50px;
+        top:25px;
+        font-size:$font-b;
+        text-shadow:5px 5px 15px #eee;
+        text-align:center;
+        text-decoration: underline;
+        a{color:#000 ;font-weight: bold;}
+        a:hover{
+            text-shadow:none;
+        }
+    }
+    form
+    {
+        background-color:rgba(256,256,256,0.5);
+        @include iphone{
+            height:70vh;
+        }
+        @include tablet{
+            height:50vh;
+        }
+        @include laptop{
+            height:76vh;
+        }
+        h1{
+            text-align:center;
+            padding: 20px 0 30px 0;
+        }
+        
+        .list_input{
+            @include iphone{
+                width:85%;
+            }
+            position: relative;
+            width:70%;
+            margin:auto;
+            padding:5px 0 5px 30px;
+            display:flex;
+            justify-content: space-between;
+            align-items: baseline;
+            .block_input{
+                opacity:0.5;
+                width:70%;
+                @include iphone{
+                    width:65%;
+                }
+            }
+        }
+        .block_submit{
+            @include iphone{
+                width:85%;
+                border-color:rgb(118, 118, 118);
+                background-color:rgb(239, 239, 239);
+            }
+            @include block-button;
+            //margin-top:10px;
+        }
+        .block_register{
+            @include iphone{
+                width:85%;
+            }
+            @include block-button;
+            border-width: 1px;
+            border-style: outset;
+            border-color:rgb(118, 118, 118);
+            text-align:center;
+            background-color:rgb(239, 239, 239);
+            a{
+                color:#000;
+                text-decoration:none;
+                display:block;
+                width:100%;
+                cursor:default;
+            }
+        }
+        .block_register:hover{
+            background-color:rgb(225,225,225);
+            border-color: $color-primary;
+        }
+    }
+}
+
+//home.php
+#block_home{
+    @include iphone{
+        height:78vh;
+    }
+    @include tablet{
+        height:78vh;
+    }
+    h1
+    {
+        margin-bottom:0;
+        padding-bottom: 10px;
+    }
+    .input_list
+    {
+        display:flex;
+        width:90%;
+        margin:0 auto 10px;
+        //border:rgb(118, 118, 118) bold solid;
+        border:none;
+        background-color:#fff;
+        box-sizing: border-box;
+        border-radius:5px;
+        padding:5px 0 5px 0;
+        .input_list-l{
+            width:90%;
+            border:none;
+            flex:9;
+            margin-left:5px;
+            .input_text
+            {
+                display:block;
+                width:100%;
+                padding-left:5px;
+                font-family:"sans-serif ";
+                border:none;
+                border-bottom:1px #000 solid;
+               
+            } 
+            
+            .input_date
+            {
+                display:block;
+                width:100%;
+                padding-left:5px;
+                font-family:"sans-serif ";
+                border:none;
+                
+            }
+        }
+        .input_list-r{
+            width:10%;
+            flex:1;
+            margin:0 5px 0 15px;
+            .addBtn
+            {
+                background-image: url(../images/add.png);
+                background-size:contain;
+                background-repeat: no-repeat;
+                background-position:center;
+                width:100%;
+                height:100%;
+                border:0;
+                outline:none;
+                background-color:#fff;
+                padding:0;
+                cursor:pointer;
+            }
+        } 
+    }
+    
+    .items_list{
+        width:90%;
+        margin:auto;
+        .row{
+            background-color:#dbd9d9;
+            .block_item
+            {
+                border:1px #fff solid;
+                text-align:center;
+                font-weight:bold;
+                height:30px;
+                padding-top:3px;
+                font-size:$font-m;
+                @include iphone{
+                    font-size:$font-s;
+                    padding-top:5px;
+                }
+            } 
+            .block_item:last-child{
+                @include iphone{
+                    padding-left:0;
+                    padding-right: 0;
+                }
+            }  
+        }
+        
+    }
+    .myList
+    {
+        width:90%;
+        margin:auto;
+        list-style-type:none;
+        padding-left:0;
+        overflow-y:hidden;
+        height:53%;
+        li{
+            height:50px;
+            background-color:#eee;
+            padding-left:25px;
+            position: relative;
+            cursor:pointer;
+              .item{
+                @include item-list;  
+                width:75%;
+                color:#000;
+                padding-top:5px;
+                
+                .item_title
+                {
+                    font-weight:bold;
+                    @include enetrValue;
+                    height:50%;
+                    margin-bottom: 3px;
+                    @include iphone{
+                        font-size:$font-s;
+                    }
+                }
+                .item_date
+                {
+                    font-size:$font-mini;
+                    color:gray;
+                    @include enetrValue;
+                    height:40%;
+                }
+                
+              }
+              .itemStatus{
+                @include item-list; 
+                width:25%;
+                text-align:center;
+                img{
+                    width:14px;
+                    height:14px;
+                    margin-top:15px;
+                }
+                img:last-child{
+                    margin-left:10px;
+                }
+              }
+         
+        }
+        li:nth-child(odd){
+            background-color:#fff ;
+        }
+        li::before
+        {
+            content:"";
+            display:block;
+            width:20px;
+            height:20px;
+            position: absolute;
+            left:5px;
+            bottom:0;
+            top:0;
+            margin:auto;
+            border:2px solid #A5EB78;
+
+        }
+        li.checked::before{
+            background-image: url(../images/tick.png);
+            background-size:cover;
+        }
+    }
+   #save
+    {
+        font-size:$font-mini;
+        background-color:#dbd9d9 ;
+        border:1px #fff solid;
+        font-family:"monospace","sans-serif " !important;
+        border-radius: 5px;
+        display:block;
+        margin:8px auto 3px auto;
+        
+    }
+}

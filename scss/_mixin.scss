@@ -1,0 +1,68 @@
+@mixin imageIcon
+{
+    background-size:cover;
+    content:" ";
+    display:block;
+    width:25px;
+    height:25px;
+    position: absolute;
+    left: 0;
+    bottom:0;
+    margin:auto;
+    top:0;
+    z-index:100;
+}
+
+@mixin block-button
+{
+    width:70%;
+    display:block;
+    margin:auto;
+    border-radius: 15px !important;
+}
+
+@mixin item-list
+{
+    display:inline-block;
+    
+    opacity: none;
+    height:100%;
+    float:left;
+}
+
+@mixin enetrValue
+{
+    display:block;
+    margin:auto;
+    text-align:center;
+    font-family:"monospace","sans-serif ";
+    background-color:inherit ;
+    border:1px solid gray;
+    border-radius: 5px;
+    width:90%;
+}
+
+@mixin msg {
+    margin:auto;
+    text-align:center;
+    font-weight:bold;
+    font-size:$font-m;
+}
+
+@mixin iphone{
+    @media(min-width:320px) and (max-width:767.98px){
+        @content;
+    }
+}
+
+@mixin tablet{
+    @media(min-width:768px) and (max-width:1023.98px){
+        @content;
+    }
+}
+
+@mixin laptop{
+    @media(min-width:1024px){
+        @content;
+    }
+}

@@ -1,0 +1,34 @@
+//registr.php
+.label_email::before{
+    background-image: url(../images/mail.png);
+    @include imageIcon;
+    
+}
+.label_password::before{
+    background-image: url(../images/key.png);
+    @include imageIcon;
+    
+}
+
+.label_name::before{
+    background-image: url(../images/user.png);
+    @include imageIcon;
+    
+}
+
+.label_birth::before{
+    background-image: url(../images/cake.png);
+    @include imageIcon;
+    
+}
+
+.label_gender::before{
+    background-image: url(../images/sex.png);
+    @include imageIcon;
+    
+}
+/*--------------------------------*/
+
+
+
+
