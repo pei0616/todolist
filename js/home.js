@@ -114,10 +114,7 @@ function addItem(input_item,input_date){
         window.addEventListener('click',e =>{
             msg.innerHTML='';
         })
-        /*window.addEventListener('touchstart',e =>{
-            e.preventDefault();
-            msg.innerHTML='';
-        })*/
+       
     }
     
     //是否完成

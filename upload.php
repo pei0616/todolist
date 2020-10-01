@@ -17,9 +17,4 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     }
 }
 
-// $diary = $_POST['diary'];
-	//$query = "UPDATE demo SET diary='".$diary."' WHERE id=".$_SESSION['id'];
-	
-	//mysqli_query($link, $query);
-
 ?>

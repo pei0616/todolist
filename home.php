@@ -50,6 +50,6 @@
         } );
     </script>
     <script type="text/javascript" src="js/home.js"></script>
-    <script rtpe="text/javascript" src="js/ajax.js"></script>
+    <script type="text/javascript" src="js/ajax.js"></script>
 </body>
 </html>
