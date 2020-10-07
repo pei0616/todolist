@@ -126,6 +126,7 @@ html, body {
   display: block;
   margin: auto;
   border-radius: 15px !important;
+  outline: none;
 }
 
 @media (min-width: 320px) and (max-width: 767.98px) {
@@ -141,6 +142,7 @@ html, body {
   display: block;
   margin: auto;
   border-radius: 15px !important;
+  outline: none;
   border-width: 1px;
   border-style: outset;
   border-color: #767676;
